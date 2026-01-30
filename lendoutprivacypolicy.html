@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<style>
+			body { widows:0; orphans:0; font-family:'Liberation Serif'; font-size:12pt }
+			h1, h2, h3, p { margin:0pt }
+			li { margin-top:0pt; margin-bottom:0pt }
+			h1 { margin-top:12pt; margin-bottom:6pt; page-break-after:avoid; widows:0; orphans:0; font-family:'Liberation Serif'; font-size:24pt; font-weight:bold }
+			h2 { margin-top:10pt; margin-bottom:6pt; page-break-after:avoid; widows:0; orphans:0; font-family:'Liberation Serif'; font-size:18pt; font-weight:bold; font-style:normal }
+			h3 { margin-top:7pt; margin-bottom:6pt; page-break-after:avoid; widows:0; orphans:0; font-family:'Liberation Serif'; font-size:14pt; font-weight:bold }
+			.Caption { margin-top:6pt; margin-bottom:6pt; widows:0; orphans:0; font-size:12pt; font-style:italic }
+			.Heading { margin-top:12pt; margin-bottom:6pt; page-break-after:avoid; widows:0; orphans:0; font-family:'Liberation Sans'; font-size:14pt }
+			.HorizontalLine { margin-top:0pt; margin-bottom:14.15pt; widows:0; orphans:0; border-bottom:0.75pt double #808080; font-size:6pt }
+			.Index { widows:0; orphans:0; font-size:12pt }
+			.List { margin-top:0pt; margin-bottom:7pt; line-height:115%; widows:0; orphans:0; font-size:12pt }
+			.Quotations { margin:0pt 28.35pt 14.15pt; text-indent:0pt; widows:0; orphans:0; font-size:12pt }
+			.Standard { widows:0; orphans:0; font-size:12pt }
+			.Textbody { margin-top:0pt; margin-bottom:7pt; line-height:115%; widows:0; orphans:0; font-size:12pt }
+			span.BulletSymbols { font-family:OpenSymbol }
+			span.Hyperlink { text-decoration:underline; color:#000080 }
+			span.StrongEmphasis { font-weight:bold }
+			.awlist1 { list-style:none; counter-reset:awlistcounter1_0 }
+			.awlist1 > li:before { content:counter(awlistcounter1_0, none); counter-increment:awlistcounter1_0 }
+			.awlist2 { list-style:none; counter-reset:awlistcounter1_1 }
+			.awlist2 > li:before { content:counter(awlistcounter1_1, none); counter-increment:awlistcounter1_1 }
+			.awlist3 { list-style:none; counter-reset:awlistcounter1_1 1 }
+			.awlist3 > li:before { content:counter(awlistcounter1_1, none); counter-increment:awlistcounter1_1 }
+			.awlist4 { list-style:none; counter-reset:awlistcounter1_2 }
+			.awlist4 > li:before { content:counter(awlistcounter1_2, none); counter-increment:awlistcounter1_2 }
+			.awlist5 { list-style:none; counter-reset:awlistcounter6_0 }
+			.awlist5 > li:before { content:'•'; counter-increment:awlistcounter6_0 }
+			.awlist6 { list-style:none; counter-reset:awlistcounter1_2 1 }
+			.awlist6 > li:before { content:counter(awlistcounter1_2, none); counter-increment:awlistcounter1_2 }
+			.awlist7 { list-style:none; counter-reset:awlistcounter7_0 }
+			.awlist7 > li:before { content:'•'; counter-increment:awlistcounter7_0 }
+			.awlist8 { list-style:none; counter-reset:awlistcounter1_1 2 }
+			.awlist8 > li:before { content:counter(awlistcounter1_1, none); counter-increment:awlistcounter1_1 }
+			.awlist9 { list-style:none; counter-reset:awlistcounter1_1 3 }
+			.awlist9 > li:before { content:counter(awlistcounter1_1, none); counter-increment:awlistcounter1_1 }
+			.awlist10 { list-style:none; counter-reset:awlistcounter9_0 }
+			.awlist10 > li:before { content:'•'; counter-increment:awlistcounter9_0 }
+			.awlist11 { list-style:none; counter-reset:awlistcounter1_1 4 }
+			.awlist11 > li:before { content:counter(awlistcounter1_1, none); counter-increment:awlistcounter1_1 }
+			.awlist12 { list-style:none; counter-reset:awlistcounter10_0 }
+			.awlist12 > li:before { content:'•'; counter-increment:awlistcounter10_0 }
+			.awlist13 { list-style:none; counter-reset:awlistcounter1_1 5 }
+			.awlist13 > li:before { content:counter(awlistcounter1_1, none); counter-increment:awlistcounter1_1 }
+			.awlist14 { list-style:none; counter-reset:awlistcounter1_1 6 }
+			.awlist14 > li:before { content:counter(awlistcounter1_1, none); counter-increment:awlistcounter1_1 }
+			.awlist15 { list-style:none; counter-reset:awlistcounter12_0 }
+			.awlist15 > li:before { content:'•'; counter-increment:awlistcounter12_0 }
+			.awlist16 { list-style:none; counter-reset:awlistcounter1_1 7 }
+			.awlist16 > li:before { content:counter(awlistcounter1_1, none); counter-increment:awlistcounter1_1 }
+			.awlist17 { list-style:none; counter-reset:awlistcounter13_0 }
+			.awlist17 > li:before { content:'•'; counter-increment:awlistcounter13_0 }
+			.awlist18 { list-style:none; counter-reset:awlistcounter1_1 8 }
+			.awlist18 > li:before { content:counter(awlistcounter1_1, none); counter-increment:awlistcounter1_1 }
+			.awlist19 { list-style:none; counter-reset:awlistcounter14_0 }
+			.awlist19 > li:before { content:'•'; counter-increment:awlistcounter14_0 }
+			.awlist20 { list-style:none; counter-reset:awlistcounter1_1 9 }
+			.awlist20 > li:before { content:counter(awlistcounter1_1, none); counter-increment:awlistcounter1_1 }
+			.awlist21 { list-style:none; counter-reset:awlistcounter15_0 }
+			.awlist21 > li:before { content:'•'; counter-increment:awlistcounter15_0 }
+			.awlist22 { list-style:none; counter-reset:awlistcounter1_1 10 }
+			.awlist22 > li:before { content:counter(awlistcounter1_1, none); counter-increment:awlistcounter1_1 }
+@media (max-width: 900px) { 
+img { 
+   max-width: 100%;
+   height: auto;
+}
+
+.table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td, th {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+}	
+
+
+		</style>
+	</head>
+	<body>
+			<ul class="awlist1" style="margin:0pt; padding-left:0pt">
+				<li style="margin-top:12pt; margin-bottom:6pt; page-break-after:avoid; font-size:24pt; font-weight:bold">
+					LendOut Privacy Policy
+				</li>
+			</ul>
+			<p class="Textbody" style="margin-top:6pt; margin-bottom:17pt">
+				<strong>Effective Date:</strong> December 9, 2025
+			</p>
+			<ul class="awlist2" style="margin:0pt; padding-left:0pt">
+				<li style="margin-top:17pt; margin-bottom:6pt; page-break-after:avoid; font-size:18pt; font-weight:bold">
+					1. Introduction
+				</li>
+			</ul>
+			<p class="Textbody" style="margin-top:6pt">
+				LendOut (“we”, “our”, or “us”) values your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, store, use, and share information when you use our mobile application, <strong>LendOut</strong> (the “App”).
+			</p>
+			<p class="Textbody" style="margin-top:7pt">
+				By using the App, you agree to the practices described in this Privacy Policy. If you do not agree with any part of this policy, please do not use the App.
+			</p>
+			<p class="Textbody" style="margin-top:7pt; margin-bottom:17pt">
+				We encourage you to read this document carefully to understand how your data is handled and how you can exercise your rights regarding your personal information.
+			</p>
+			<ul class="awlist3" style="margin:0pt; padding-left:0pt">
+				<li style="margin-top:17pt; margin-bottom:13pt; page-break-after:avoid; font-size:18pt; font-weight:bold">
+					2. Information We Collect
+					<ul class="awlist4" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+						<li style="margin-top:13pt; margin-bottom:6pt; page-break-after:avoid; font-size:14pt">
+							2.1 Personal Information
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<p class="Textbody" style="margin-top:6pt">
+				The App allows you to record and manage your lending and borrowing activities. The types of personal information we collect include:
+			</p>
+			<ul class="awlist5" style="margin:0pt; padding-left:0pt">
+				<li class="Textbody" style="margin-top:7pt; margin-left:35.45pt; text-indent:-14.15pt; font-family:OpenSymbol; list-style-position:inside">
+					<span style="width:12pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Liberation Serif'">Names of individuals you lend to or borrow from.</span>
+				</li>
+				<li class="Textbody" style="margin-top:7pt; margin-left:35.45pt; text-indent:-14.15pt; font-family:OpenSymbol; list-style-position:inside">
+					<span style="width:12pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Liberation Serif'">Transaction dates.</span>
+				</li>
+				<li class="Textbody" style="margin-top:7pt; margin-left:35.45pt; text-indent:-14.15pt; font-family:OpenSymbol; list-style-position:inside">
+					<span style="width:12pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Liberation Serif'">Amounts lent or borrowed.</span>
+				</li>
+				<li class="Textbody" style="margin-top:7pt; margin-left:35.45pt; text-indent:-14.15pt; font-family:OpenSymbol; list-style-position:inside">
+					<span style="width:12pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Liberation Serif'">Notes or descriptions you enter related to your transactions.</span>
+				</li>
+			</ul>
+			<p class="Textbody" style="margin-top:7pt; margin-bottom:14pt">
+				This information is provided voluntarily by you while using the App.
+			</p>
+			<ul class="awlist6" style="margin:0pt; padding-left:0pt">
+				<li style="margin-top:14pt; margin-bottom:6pt; page-break-after:avoid; font-size:14pt; font-weight:bold">
+					2.2 Cloud Storage Information
+				</li>
+			</ul>
+			<p class="Textbody" style="margin-top:6pt">
+				To provide seamless access across devices, all your data is stored securely in our cloud infrastructure.
+			</p>
+			<ul class="awlist7" style="margin:0pt; padding-left:0pt">
+				<li class="Textbody" style="margin-top:7pt; margin-left:35.45pt; text-indent:-14.15pt; font-family:OpenSymbol; list-style-position:inside">
+					<span style="width:12pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Liberation Serif'">Data is </span><strong><span style="font-family:'Liberation Serif'; ">encrypted during transfer</span></strong><span style="font-family:'Liberation Serif'"> to protect it from interception.</span>
+				</li>
+				<li class="Textbody" style="margin-top:7pt; margin-left:35.45pt; text-indent:-14.15pt; font-family:OpenSymbol; list-style-position:inside">
+					<span style="width:12pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Liberation Serif'">Data is </span><strong><span style="font-family:'Liberation Serif'; ">encrypted at rest</span></strong><span style="font-family:'Liberation Serif'"> to prevent unauthorized access.</span>
+				</li>
+				<li class="Textbody" style="margin-top:7pt; margin-left:35.45pt; text-indent:-14.15pt; font-family:OpenSymbol; list-style-position:inside">
+					<span style="width:12pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Liberation Serif'">We implement industry-standard security measures to safeguard your information.</span>
+				</li>
+			</ul>
+			<p class="Quotations" style="margin-top:7pt; margin-bottom:24.15pt">
+				<strong>Important:</strong> LendOut does not collect device identifiers, location data, or other device-specific information. Your privacy is maintained by limiting the data collected to only what is necessary to operate the App.
+			</p>
+			<ul class="awlist8" style="margin:0pt; padding-left:0pt">
+				<li style="margin-top:24.15pt; margin-bottom:6pt; page-break-after:avoid; font-size:18pt; font-weight:bold">
+					3. How We Use Your Information
+				</li>
+			</ul>
+			<p class="Textbody" style="margin-top:6pt">
+				We use the information you provide for the following purposes:
+			</p>
+			<ol style="margin:0pt; padding-left:0pt">
+				<li class="Textbody" style="margin-top:7pt; margin-left:35.45pt; text-indent:-14.15pt; list-style-position:inside">
+					<strong>Core Functionality</strong>: To allow you to add, track, and manage lending and borrowing records.
+				</li>
+				<li class="Textbody" style="margin-top:7pt; margin-left:35.45pt; text-indent:-14.15pt; list-style-position:inside">
+					<strong>Data Synchronization</strong>: To store and retrieve your data across multiple devices via the cloud.
+				</li>
+				<li class="Textbody" style="margin-top:7pt; margin-left:35.45pt; text-indent:-14.15pt; list-style-position:inside">
+					<strong>App Improvement</strong>: To analyze usage patterns and improve App performance through aggregated and anonymous data.
+				</li>
+				<li class="Textbody" style="margin-top:7pt; margin-left:35.45pt; text-indent:-14.15pt; list-style-position:inside">
+					<strong>Notifications</strong>: To send optional messages about updates, new features, or maintenance.
+				</li>
+				<li class="Textbody" style="margin-top:7pt; margin-left:35.45pt; text-indent:-14.15pt; list-style-position:inside">
+					<strong>Legal Compliance</strong>: To comply with applicable laws and legal obligations, if required.
+				</li>
+			</ol>
+			<p class="Quotations" style="margin-top:7pt; margin-bottom:24.15pt">
+				We do <strong>not</strong> sell, trade, or rent your personal information to third parties.
+			</p>
+			<ul class="awlist9" style="margin:0pt; padding-left:0pt">
+				<li style="margin-top:24.15pt; margin-bottom:6pt; page-break-after:avoid; font-size:18pt; font-weight:bold">
+					4. Data Storage and Security
+				</li>
+			</ul>
+			<ul class="awlist10" style="margin:0pt; padding-left:0pt">
+				<li class="Textbody" style="margin-top:6pt; margin-left:35.45pt; text-indent:-14.15pt; font-family:OpenSymbol; list-style-position:inside">
+					<span style="width:12pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><strong><span style="font-family:'Liberation Serif'; ">Cloud-Based Storage</span></strong><span style="font-family:'Liberation Serif'">: All user data is securely stored in cloud servers.</span>
+				</li>
+				<li class="Textbody" style="margin-top:7pt; margin-left:35.45pt; text-indent:-14.15pt; font-family:OpenSymbol; list-style-position:inside">
+					<span style="width:12pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><strong><span style="font-family:'Liberation Serif'; ">Encryption</span></strong><span style="font-family:'Liberation Serif'">: We use encryption protocols to protect your data both in transit and at rest.</span>
+				</li>
+				<li class="Textbody" style="margin-top:7pt; margin-left:35.45pt; text-indent:-14.15pt; font-family:OpenSymbol; list-style-position:inside">
+					<span style="width:12pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><strong><span style="font-family:'Liberation Serif'; ">Access Controls</span></strong><span style="font-family:'Liberation Serif'">: Only authorized personnel and systems have access to user data.</span>
+				</li>
+				<li class="Textbody" style="margin-top:7pt; margin-left:35.45pt; text-indent:-14.15pt; font-family:OpenSymbol; list-style-position:inside">
+					<span style="width:12pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><strong><span style="font-family:'Liberation Serif'; ">User Responsibility</span></strong><span style="font-family:'Liberation Serif'">: You are responsible for safeguarding your account credentials and maintaining the confidentiality of your login information.</span>
+				</li>
+			</ul>
+			<p class="Textbody" style="margin-top:7pt; margin-bottom:17pt">
+				We regularly review our security measures to protect against unauthorized access, data loss, or disclosure.
+			</p>
+			<ul class="awlist11" style="margin:0pt; padding-left:0pt">
+				<li style="margin-top:17pt; margin-bottom:6pt; page-break-after:avoid; font-size:18pt; font-weight:bold">
+					5. Sharing and Disclosure of Information
+				</li>
+			</ul>
+			<p class="Textbody" style="margin-top:6pt">
+				We do not share personal data with third parties except in the following circumstances:
+			</p>
+			<ul class="awlist12" style="margin:0pt; padding-left:0pt">
+				<li class="Textbody" style="margin-top:7pt; margin-left:35.45pt; text-indent:-14.15pt; font-family:OpenSymbol; list-style-position:inside">
+					<span style="width:12pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><strong><span style="font-family:'Liberation Serif'; ">Legal Obligations</span></strong><span style="font-family:'Liberation Serif'">: When required to comply with laws, regulations, or valid legal requests.</span>
+				</li>
+				<li class="Textbody" style="margin-top:7pt; margin-left:35.45pt; text-indent:-14.15pt; font-family:OpenSymbol; list-style-position:inside">
+					<span style="width:12pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><strong><span style="font-family:'Liberation Serif'; ">Business Transfers</span></strong><span style="font-family:'Liberation Serif'">: In the event of a sale, merger, or acquisition, your information may be transferred as part of the business assets.</span>
+				</li>
+			</ul>
+			<p class="Quotations" style="margin-top:7pt; margin-bottom:24.15pt">
+				Third-party cloud service providers may process your data on our behalf solely for storage and operational purposes and are bound by confidentiality agreements.
+			</p>
+			<ul class="awlist13" style="margin:0pt; padding-left:0pt">
+				<li style="margin-top:24.15pt; margin-bottom:6pt; page-break-after:avoid; font-size:18pt; font-weight:bold">
+					6. User Rights and Data Management
+				</li>
+			</ul>
+			<p class="Textbody" style="margin-top:6pt">
+				You have the right to:
+			</p>
+			<ol style="margin:0pt; padding-left:0pt">
+				<li class="Textbody" style="margin-top:7pt; margin-left:35.45pt; text-indent:-14.15pt; list-style-position:inside">
+					Access your personal data stored in the cloud.
+				</li>
+				<li class="Textbody" style="margin-top:7pt; margin-left:35.45pt; text-indent:-14.15pt; list-style-position:inside">
+					Request correction or deletion of your personal data.
+				</li>
+				<li class="Textbody" style="margin-top:7pt; margin-left:35.45pt; text-indent:-14.15pt; list-style-position:inside">
+					Withdraw consent for specific uses of your information.
+				</li>
+			</ol>
+			<p class="Quotations" style="margin-top:7pt; margin-bottom:24.15pt">
+				Users can manage their data directly within the App or contact support to exercise these rights.
+			</p>
+			<ul class="awlist14" style="margin:0pt; padding-left:0pt">
+				<li style="margin-top:24.15pt; margin-bottom:6pt; page-break-after:avoid; font-size:18pt; font-weight:bold">
+					7. Third-Party Services
+				</li>
+			</ul>
+			<p class="Textbody" style="margin-top:6pt">
+				The App may utilize third-party services such as analytics or advertising platforms (e.g., Google AdMob).
+			</p>
+			<ul class="awlist15" style="margin:0pt; padding-left:0pt">
+				<li class="Textbody" style="margin-top:7pt; margin-left:35.45pt; text-indent:-14.15pt; font-family:OpenSymbol; list-style-position:inside">
+					<span style="width:12pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Liberation Serif'">These services collect </span><strong><span style="font-family:'Liberation Serif'; ">anonymous information</span></strong><span style="font-family:'Liberation Serif'"> to improve the App and provide relevant ads.</span>
+				</li>
+				<li class="Textbody" style="margin-top:7pt; margin-left:35.45pt; text-indent:-14.15pt; font-family:OpenSymbol; list-style-position:inside">
+					<span style="width:12pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Liberation Serif'">Users may opt out of personalized advertising via device settings.</span>
+				</li>
+			</ul>
+			<p class="Quotations" style="margin-top:7pt; margin-bottom:24.15pt">
+				No personal transaction data is shared with these third-party services.
+			</p>
+			<ul class="awlist16" style="margin:0pt; padding-left:0pt">
+				<li style="margin-top:24.15pt; margin-bottom:6pt; page-break-after:avoid; font-size:18pt; font-weight:bold">
+					8. Children’s Privacy
+				</li>
+			</ul>
+			<p class="Textbody" style="margin-top:6pt">
+				LendOut is <strong>not intended for children under 13 years of age</strong>.
+			</p>
+			<ul class="awlist17" style="margin:0pt; padding-left:0pt">
+				<li class="Textbody" style="margin-top:7pt; margin-left:35.45pt; text-indent:-14.15pt; font-family:OpenSymbol; list-style-position:inside">
+					<span style="width:12pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Liberation Serif'">We do not knowingly collect personal information from children.</span>
+				</li>
+				<li class="Textbody" style="margin-top:7pt; margin-left:35.45pt; margin-bottom:17pt; text-indent:-14.15pt; font-family:OpenSymbol; list-style-position:inside">
+					<span style="width:12pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Liberation Serif'">If you believe a child has provided information to the App, please contact us immediately to have the data deleted.</span>
+					<ul class="awlist18" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+						<li style="margin-top:17pt; margin-left:-35.45pt; margin-bottom:6pt; text-indent:0pt; page-break-after:avoid; line-height:normal; font-family:'Liberation Serif'; font-size:18pt; font-weight:bold; list-style-position:outside">
+							9. Data Retention
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<p class="Textbody" style="margin-top:6pt">
+				We retain your personal information in the cloud as long as your account exists or as needed to provide App services.
+			</p>
+			<ul class="awlist19" style="margin:0pt; padding-left:0pt">
+				<li class="Textbody" style="margin-top:7pt; margin-left:35.45pt; text-indent:-14.15pt; font-family:OpenSymbol; list-style-position:inside">
+					<span style="width:12pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Liberation Serif'">Users can request deletion of their account and associated data.</span>
+				</li>
+				<li class="Textbody" style="margin-top:7pt; margin-left:35.45pt; margin-bottom:17pt; text-indent:-14.15pt; font-family:OpenSymbol; list-style-position:inside">
+					<span style="width:12pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Liberation Serif'">Certain data may be retained for legal or business purposes, such as compliance with regulatory obligations.</span>
+					<ul class="awlist20" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+						<li style="margin-top:17pt; margin-left:-35.45pt; margin-bottom:6pt; text-indent:0pt; page-break-after:avoid; line-height:normal; font-family:'Liberation Serif'; font-size:18pt; font-weight:bold; list-style-position:outside">
+							10. Changes to This Privacy Policy
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<p class="Textbody" style="margin-top:6pt">
+				We may update this Privacy Policy periodically to reflect changes in the App, cloud storage services, or legal requirements.
+			</p>
+			<ul class="awlist21" style="margin:0pt; padding-left:0pt">
+				<li class="Textbody" style="margin-top:7pt; margin-left:35.45pt; text-indent:-14.15pt; font-family:OpenSymbol; list-style-position:inside">
+					<span style="width:12pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Liberation Serif'">Updates will be posted in the App or on our website.</span>
+				</li>
+				<li class="Textbody" style="margin-top:7pt; margin-left:35.45pt; text-indent:-14.15pt; font-family:OpenSymbol; list-style-position:inside">
+					<span style="width:12pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Liberation Serif'">The “Effective Date” at the top of this document will be updated.</span>
+				</li>
+				<li class="Textbody" style="margin-top:7pt; margin-left:35.45pt; margin-bottom:17pt; text-indent:-14.15pt; font-family:OpenSymbol; list-style-position:inside">
+					<span style="width:12pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Liberation Serif'">Continued use of the App after updates indicates acceptance of the revised Privacy Policy.</span>
+					<ul class="awlist22" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+						<li style="margin-top:17pt; margin-left:-35.45pt; margin-bottom:6pt; text-indent:0pt; page-break-after:avoid; line-height:normal; font-family:'Liberation Serif'; font-size:18pt; font-weight:bold; list-style-position:outside">
+							11. Contact Information
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<p class="Textbody" style="margin-top:6pt">
+				If you have any questions, concerns, or requests regarding this Privacy Policy, you can contact us at:
+			</p>
+			<p class="Textbody" style="margin-top:7pt">
+				<strong>Email: </strong><a href="mailto:rikhithreddy@gmail.com" style="text-decoration:none"><strong><span style="color:#000000">rikhithreddy@gmail.com</span></strong></a><br /><strong>Address:</strong> Vemulapally, Nalgonda, Telangana, 508217
+			</p>
+			<p class="Textbody" style="margin-top:7pt">
+				We are committed to responding promptly to your inquiries and assisting you in exercising your privacy rights.
+			</p>
+			<p class="Textbody" style="margin-top:7pt">
+				<strong>End of Privacy Policy</strong>
+			</p>
+	<p style="bottom: 10px; right: 10px; position: absolute;"><a href="https://wordtohtml.net/?utm_source=wth_free_doc_conversion_link&utm_medium=external" target="_blank" style="font-size:11px; color: #d0d0d0">Converted to HTML with WordToHTML.net</a><span style="font-size:11px; color: #d0d0d0"> | </span><a href="https://documentconverter.pro/?utm_source=wth_free_doc_conversion_link&utm_medium=external" target="_blank" style="font-size:11px; color: #d0d0d0">Document Converter for Windows</a></p>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"4581d6a58cf94e929fad52deda295622","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
